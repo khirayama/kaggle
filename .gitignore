@@ -1,6 +1,7 @@
 .DS_Store
 
 **/*.pyc
+**/*.log
 
 **/*.7z
 **/*.csv
