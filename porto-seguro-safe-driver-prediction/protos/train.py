@@ -1,13 +1,13 @@
 import pandas as pd
 import numpy as np
-from logging import StreamHandler, DEBUG, Formatter, FileHandler
+from logging import StreamHandler, DEBUG, Formatter, FileHandler, getLogger
 from sklearn.linear_model import LogisticRegression
 
 from load_data import load_train_data, load_test_data
 
 logger = getLogger(__name__)
 
-DIR = 'result_tmp'
+DIR = 'result_tmp/'
 SAMPLE_SUBMIT_FILE = '../input/sample_submission.csv'
 
 if __name__ == '__main__':
@@ -38,15 +38,19 @@ if __name__ == '__main__':
     logger.info('data preparation end {}'.format(x_train.shape))
 
     clf = LogisticRegression(random_state=0)
-    clf.fit
+    clf.fit(x_train, y_train)
 
     logger.info('train end')
 
     df = load_test_data()
 
-    x_test = df[use_cols].sort_values('x')
+    x_test = df[use_cols].sort_values('id')
 
     logger.info('test data load end {}'.format(x_test.shape))
     pred_test = clf.predict_proba(x_test)
 
-    df_sumit = pd.read_csv(SAMPLE_SUBMIT_FILE)
+    df_submit = pd.read_csv(SAMPLE_SUBMIT_FILE).sort_values('id')
+    df_submit['target'] = pred_test
+
+    df_submit.to_csv(DIR + 'submit.csv')
+    logger.info('end')
