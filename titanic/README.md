@@ -21,4 +21,5 @@ $ kaggle competitions download -c titanic -p ./input
 ## Refs
 
 - [【Kaggle初心者入門編】タイタニック号で生き残るのは誰？](https://www.codexa.net/kaggle-titanic-beginner/)
-= [Kaggle事始め](https://qiita.com/taka4sato/items/802c494fdebeaa7f43b7)
+- [Kaggle事始め](https://qiita.com/taka4sato/items/802c494fdebeaa7f43b7)
+- [pandas で年齢階級をつくる](https://qiita.com/kshigeru/items/bfa8c11d1e6487c791d3)
