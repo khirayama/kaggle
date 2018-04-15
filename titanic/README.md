@@ -22,6 +22,10 @@ $ kaggle competitions download -c titanic -p ./input
 $ ipython notebook
 ```
 
+```
+$ kaggle competitions submit --competition titanic -f ./predict_result_data.csv -m "First submit"
+```
+
 ## Research
 
 - [pandas.DataFrame.dropna](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.dropna.html)
