@@ -18,6 +18,10 @@ https://www.kaggle.com/c/titani://www.kaggle.com/c/titanic
 $ kaggle competitions download -c titanic -p ./input
 ```
 
+```
+$ ipython notebook
+```
+
 ## Research
 
 - [pandas.DataFrame.dropna](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.dropna.html)
