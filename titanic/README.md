@@ -27,7 +27,7 @@ $ kaggle competitions submit --competition titanic -f ./predict_result_data.csv 
 ```
 ## Questions
 
-- 欠損値の補完(中央値？)
+- 欠損値の補完(中央値？test_dfに対してもdfで補完する？)
 
 ## Research
 
@@ -35,6 +35,7 @@ $ kaggle competitions submit --competition titanic -f ./predict_result_data.csv 
 - [pandas.DataFrame.hist](pandas.DataFrame.histndas.DataFrame.hist)
 - [pandas.DataFrame.fillna](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.fillna.html)
 - [pandas.Series.drop](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.drop.html)
+- [sklearn.ensemble.RandomForestClassifier](http://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
 
 ## Refs
 
