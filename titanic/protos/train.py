@@ -32,7 +32,7 @@ zip_data = zip(test_data[:,0].astype(int), output.astype(int))
 predict_data = list(zip_data)
 
 with open('predict_result_data.csv', 'w') as f:
-    writer = csv.writer(f, lineterminator='\n')
+    writer = csv.writer(f, lineterminator = '\n')
     writer.writerow(['PassengerId', 'Survived'])
     for pid, survived in zip(test_data[:,0].astype(int), output.astype(int)):
         writer.writerow([pid, survived])
