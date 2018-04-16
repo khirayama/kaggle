@@ -12,23 +12,19 @@ from sklearn.ensemble import RandomForestClassifier
 df= pd.read_csv('./input/train.csv').replace('male', 0).replace('female', 1)
 df['Age'].fillna(df.Age.median(), inplace = True)
 df['FamilySize'] = df['SibSp'] + df['Parch'] + 1
-df2 = df.drop(['Name', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], axis = 1)
+train_data = df.drop(['Name', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], axis = 1).values
 
-train_data = df2.values
 xs = train_data[:, 2:]
 y = train_data[:, 1]
 
 forest = RandomForestClassifier(n_estimators = 100)
-
 forest = forest.fit(xs, y)
 
 test_df = pd.read_csv('./input/test.csv').replace('male', 0).replace('female', 1)
-
 test_df['Age'].fillna(df.Age.median(), inplace = True)
 test_df['FamilySize'] = df['SibSp'] + df['Parch'] + 1
-test_df2 = test_df.drop(['Name', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], axis = 1)
+test_data = test_df.drop(['Name', 'SibSp', 'Parch', 'Ticket', 'Fare', 'Cabin', 'Embarked'], axis = 1).values
 
-test_data = test_df2.values
 xs_test = test_data[:, 1:]
 output = forest.predict(xs_test)
 
