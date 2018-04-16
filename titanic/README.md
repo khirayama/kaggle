@@ -25,11 +25,16 @@ $ ipython notebook
 ```
 $ kaggle competitions submit --competition titanic -f ./predict_result_data.csv -m "First submit"
 ```
+## Questions
+
+- 欠損値の補完(中央値？)
 
 ## Research
 
 - [pandas.DataFrame.dropna](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.dropna.html)
 - [pandas.DataFrame.hist](pandas.DataFrame.histndas.DataFrame.hist)
+- [pandas.DataFrame.fillna](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.fillna.html)
+- [pandas.Series.drop](https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.drop.html)
 
 ## Refs
 
