@@ -4,11 +4,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
 
-# df = pd.read_csv('./input/train.csv')
-# print(df.dtypes)
-# print(df.head(3))
-# print(df.describe())
-
 df = pd.read_csv('./input/train.csv')
 df = df.replace('male', 0).replace('female', 1)
 df['Age'].fillna(df.Age.median(), inplace = True)
