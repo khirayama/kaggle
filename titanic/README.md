@@ -12,7 +12,7 @@
 
 ## Memo
 
-https://www.kaggle.com/c/titani://www.kaggle.com/c/titanic
+https://www.kaggle.com/c/titanic
 
 ```
 $ kaggle competitions download -c titanic -p ./input
