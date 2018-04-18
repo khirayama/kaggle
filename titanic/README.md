@@ -8,6 +8,8 @@
 
 - Except which vars I should use
 - Prediction using some approch
+- Validate accurancy for own prediction
+
 - Make a submission file
 
 ## Memo
