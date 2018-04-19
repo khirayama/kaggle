@@ -52,3 +52,4 @@ $ kaggle competitions submit --competition titanic -f ./predict_result_data.csv 
 - [ダミー変数で重回帰分析を応用しよう！](http://xica.net/magellan/marketing-idea/stats/abou-dummy-variable/)
 - [Webデータ分析＆データサイエンスで役立つ統計学・機械学習系の分析手法10選](https://tjo.hatenablog.com/entry/2013/06/10/190508)
 - [データサイエンティストによる統計入門 ― k平均法でデータをクラスタリングしてみよう！](https://employment.en-japan.com/engineerhub/entry/2018/04/10/110000)
+- [機械学習アルゴリズム選択ガイド](http://www.sascom.jp/blog/2017/11/21/machine-learning-algorithm-use/)
