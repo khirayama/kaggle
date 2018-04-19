@@ -51,3 +51,4 @@ $ kaggle competitions submit --competition titanic -f ./predict_result_data.csv 
 - [Kaggleのtitanic問題で上位10%に入るまでのデータ解析と所感](http://www.mirandora.com/?p=1804)
 - [ダミー変数で重回帰分析を応用しよう！](http://xica.net/magellan/marketing-idea/stats/abou-dummy-variable/)
 - [Webデータ分析＆データサイエンスで役立つ統計学・機械学習系の分析手法10選](https://tjo.hatenablog.com/entry/2013/06/10/190508)
+- [データサイエンティストによる統計入門 ― k平均法でデータをクラスタリングしてみよう！](https://employment.en-japan.com/engineerhub/entry/2018/04/10/110000)
