@@ -25,8 +25,9 @@ $ ipython notebook
 ```
 
 ```
-$ kaggle competitions submit --competition titanic -f ./predict_result_data.csv -m "First submit"
+$ kaggle competitions submit --competition titanic -f ./predict_result_data.csv -m "Submit"
 ```
+
 ## Questions
 
 - 欠損値の補完(中央値？test_dfに対してもdfで補完する？)
@@ -49,3 +50,4 @@ $ kaggle competitions submit --competition titanic -f ./predict_result_data.csv 
 - [タイタニック号乗客の生存予測モデルを立ててみる](https://qiita.com/suzumi/items/8ce18bc90c942663d1e6)
 - [Kaggleのtitanic問題で上位10%に入るまでのデータ解析と所感](http://www.mirandora.com/?p=1804)
 - [ダミー変数で重回帰分析を応用しよう！](http://xica.net/magellan/marketing-idea/stats/abou-dummy-variable/)
+- [Webデータ分析＆データサイエンスで役立つ統計学・機械学習系の分析手法10選](https://tjo.hatenablog.com/entry/2013/06/10/190508)
