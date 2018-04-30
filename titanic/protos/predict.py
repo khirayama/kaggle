@@ -2,6 +2,7 @@ import csv
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 
+# Train
 df_train = pd.read_csv('./input/train.csv')
 
 df_train['Age'].fillna(df_train.Age.median(), inplace = True)
@@ -22,6 +23,7 @@ y = train_data[:, 1]
 forest = RandomForestClassifier(n_estimators = 100)
 forest = forest.fit(xs, y)
 
+# Prediction
 df_test = pd.read_csv('./input/test.csv')
 
 df_test['Age'].fillna(df_train.Age.median(), inplace = True)
