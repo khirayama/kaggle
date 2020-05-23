@@ -1,6 +1,7 @@
 import csv
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import KFold
 
 # Train
 df_train = pd.read_csv('./input/train.csv')
@@ -22,6 +23,33 @@ y = train_data[:, 1]
 
 forest = RandomForestClassifier(n_estimators = 100)
 forest = forest.fit(xs, y)
+
+# Validation
+kf = KFold(n_splits=3, shuffle=True, random_state=17)
+for train_index, test_index in kf.split(X):
+    X_train, X_test = X[train_index], X[test_index]
+    y_train, y_test = y[train_index], y[test_index]
+
+    # 構築データでモデル構築
+    clf.fit(X_train, y_train)
+
+    # 構築データの予測値
+    pred_train = clf.predict(X_train)
+
+    # 構築データのaccuracy
+    auccuracy = accuracy_score(pred_train, y_train)
+
+    #構築データのaccuracyを足していく
+    score_train_tmp+=auccuracy
+
+    #検証データの予測値
+    pred_test = clf.predict(X_test)
+
+    #検証データのaccuracy
+    auccuracy = accuracy_score(pred_test, y_test)
+
+    #検証データのaccuracyを足していく
+    score_test_tmp+=auccuracy
 
 # Prediction
 df_test = pd.read_csv('./input/test.csv')
